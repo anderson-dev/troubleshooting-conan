@@ -34,6 +34,7 @@ class HelloConan(ConanFile):
 
     def requirements(self):
         self.requires("boost/1.75.0")
+        self.requires("boost/1.77.0", override=True)
 
     def build(self):
         cmake = CMake(self)
