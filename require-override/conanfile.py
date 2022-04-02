@@ -32,6 +32,9 @@ class HelloConan(ConanFile):
         tc = CMakeToolchain(self)
         tc.generate()
 
+    def requirements(self):
+        self.requires("boost/1.75.0")
+
     def build(self):
         cmake = CMake(self)
         cmake.configure()
